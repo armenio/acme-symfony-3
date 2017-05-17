@@ -1,69 +1,36 @@
-Symfony Standard Edition
-========================
+# Gerenciador de produtos Acme Symfony 3
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony
-application that you can use as the skeleton for your new applications.
+Api para gestão de produtos da empresa Acme
 
-For details on how to download and get started with Symfony, see the
-[Installation][1] chapter of the Symfony Documentation.
+#### Tecnologias utilizadas
+- Zend Framework 3
+- Cake ORM com Módulo de integração para zend framework 3 desenvolvido por mim https://github.com/armenio/zf3-cake-orm
+- Autenticação com token JWT usando o Bundle LexikJWTAuthenticationBundle: https://github.com/lexik/LexikJWTAuthenticationBundle
+- Composer como gerenciador de dependências php
+- Banco de dados MySql
 
-What's inside?
---------------
+## Instalação do projeto
 
-The Symfony Standard Edition is configured with the following defaults:
+```bash
+$ git clone https://github.com/armenio/acme-symfony-3.git aplicacao
+$ cd aplicacao
+$ composer install
+```
 
-  * An AppBundle you can use to start coding;
+- Não conhece o composer? [Veja aqui](http://getcomposer.org/doc/00-intro.md#introduction) como usá-lo
+    - * é possível usar o composer sem instalação com o comando:
+     ```bash
+     $ /caminho/do/php /caminho/do/composer.phar install
+     ```
 
-  * Twig as the only configured template engine;
+### O arquivo para criação do banco de dados encontra-se em:
+/caminho/da/aplicacao/var/db.sql
 
-  * Doctrine ORM/DBAL;
+### Configuração do acesso ao bando de dados:
+A configuração do banco de dados e servidor de e-mail é feita durante a instalação
 
-  * Swiftmailer;
-
-  * Annotations enabled for everything.
-
-It comes pre-configured with the following bundles:
-
-  * **FrameworkBundle** - The core Symfony framework bundle
-
-  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
-    template and routing annotation capability
-
-  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
-
-  * [**TwigBundle**][8] - Adds support for the Twig templating engine
-
-  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
-    component
-
-  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
-    sending emails
-
-  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
-
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
-    the web debug toolbar
-
-  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
-    configuring and working with Symfony distributions
-
-  * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation
-    capabilities
-
-  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
-    integration
-
-All libraries and bundles included in the Symfony Standard Edition are
-released under the MIT or BSD license.
-
-Enjoy!
-
-[1]:  https://symfony.com/doc/3.2/setup.html
-[6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  https://symfony.com/doc/3.2/doctrine.html
-[8]:  https://symfony.com/doc/3.2/templating.html
-[9]:  https://symfony.com/doc/3.2/security.html
-[10]: https://symfony.com/doc/3.2/email.html
-[11]: https://symfony.com/doc/3.2/logging.html
-[12]: https://symfony.com/doc/3.2/assetic/asset_management.html
-[13]: https://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html
+## Rodando a aplicação
+     ```bash
+     $ cd /caminho/da/aplicacao
+     $ php bin/console server:run
+     ```
