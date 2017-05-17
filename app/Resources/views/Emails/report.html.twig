@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Relatório gerencial Acme</title>
+
+    <style type="text/css">
+        #outlook a {
+            padding: 0;
+        }
+
+        .ExternalClass {
+            width: 100%;
+        }
+
+        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+            line-height: 100%;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+            font-size: 0px;
+            line-height: 0px;
+        }
+
+        table td,
+        table th{
+            border-collapse: collapse;
+            vertical-align: top;
+        }
+
+        table {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+
+            max-width: 100%;
+
+            background-color: transparent;
+        }
+
+        img {
+            display: block;
+            outline: none;
+            text-decoration: none;
+            -ms-interpolation-mode: bicubic;
+        }
+
+        a img {
+            border: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000001;
+        }
+
+        a.phone {
+            text-decoration: none;
+            color: #000001 !important;
+            pointer-events: auto;
+            cursor: default;
+        }
+
+        span {
+            font-size: 13px;
+            line-height: 17px;
+            font-family: monospace;
+            color: #000001;
+        }
+
+        * {
+            font-family: Arial, Verdana, Geneva, sans-serif;
+            color: #000001;
+            font-size: 13px;
+            line-height: 17px;
+        }
+
+        p {
+            margin: 0 0 10px 0;
+            margin-bottom: 10px;
+            color: #000001;
+            font-size: 13px;
+            line-height: 17px;
+        }
+    </style>
+    <!--[if gte mso 9]>
+    <style>
+        /* Target Outlook 2007 and 2010 */
+    </style>
+    <![endif]-->
+</head>
+<body style="width: 100%; margin: 0; padding: 0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-family: Arial, Verdana, Geneva, sans-serif;">
+
+<div marginwidth="0" marginheight="0">
+    <center>
+        <table border="0" cellpadding="0" cellspacing="0" width="550">
+            <tr>
+                <td>
+                    <p style="margin-top: 15px;">
+                        <font size="4" face="Arial, Verdana, Geneva, sans-serif" style="min-height: 34px;">
+                            <strong style="color: #1c67e3; font-size: 18px;">Relatório gerencial Acme</strong>
+                        </font>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <th style="padding: .75rem; border-top: 1px solid #eceeef;">#ID</th>
+                            <th style="padding: .75rem; border-top: 1px solid #eceeef; text-align: left;" align="left">Nome</th>
+                            <th style="padding: .75rem; border-top: 1px solid #eceeef; text-align: right;" align="right">Preço</th>
+                            <th style="padding: .75rem; border-top: 1px solid #eceeef;">Estoque</th>
+                        </tr>
+                        {% for item in contents %}
+                            <tr bgcolor="{{ cycle(['#f7f7f7', '#ffffff'],loop.index) }}">
+                                <td style="padding: .75rem; border-top: 1px solid #eceeef; text-align: center;" align="center">{{ item.id }}</td>
+                                <td style="padding: .75rem; border-top: 1px solid #eceeef; text-align: left;" align="left">{{ item.name }}</td>
+                                <td style="padding: .75rem; border-top: 1px solid #eceeef; text-align: right;" align="right">{{ item.price }}</td>
+                                <td style="padding: .75rem; border-top: 1px solid #eceeef; text-align: center;" align="center">
+                                    {% if item.stock == 0 %}<span style="color: #ff0000;">Esgotado!</span>{% else %}{{ item.stock }} Unidade{% if item.stock > 1 %}s{% endif %}{% endif %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </center>
+</div>
+</body>
+</html>

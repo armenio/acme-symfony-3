@@ -1,0 +1,14 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+api_users:
+    type: rest
+    resource: AppBundle\Controller\UsersController
+
+api_products:
+    type: rest
+    resource: AppBundle\Controller\ProductsController
+
+api_login_check:
+    path: /api/login_check
