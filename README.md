@@ -11,11 +11,9 @@ Api para gestão de produtos da empresa Acme
 
 ## Instalação do projeto
 
-```bash
-$ git clone https://github.com/armenio/acme-symfony-3.git aplicacao
-$ cd aplicacao
-$ composer install
-```
+    $ git clone https://github.com/armenio/acme-symfony-3.git aplicacao
+    $ cd aplicacao
+    $ composer install
 
 - Não conhece o composer? [Veja aqui](http://getcomposer.org/doc/00-intro.md#introduction) como usá-lo
     - * é possível usar o composer sem instalação com o comando:
@@ -30,7 +28,5 @@ $ composer install
 A configuração do banco de dados e servidor de e-mail é feita durante a instalação
 
 ## Rodando a aplicação
-     ```bash
      $ cd /caminho/da/aplicacao
      $ php bin/console server:run
-     ```
