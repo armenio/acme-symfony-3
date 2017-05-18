@@ -3,8 +3,8 @@
 Api para gestão de produtos da empresa Acme
 
 #### Tecnologias utilizadas
-- Zend Framework 3
-- Cake ORM com Módulo de integração para zend framework 3 desenvolvido por mim https://github.com/armenio/zf3-cake-orm
+- Symfony 3
+- Doctrine ORM
 - Autenticação com token JWT usando o Bundle LexikJWTAuthenticationBundle: https://github.com/lexik/LexikJWTAuthenticationBundle
 - Composer como gerenciador de dependências php
 - Banco de dados MySql
@@ -16,7 +16,7 @@ Api para gestão de produtos da empresa Acme
     $ composer install
 
 - Não conhece o composer? [Veja aqui](http://getcomposer.org/doc/00-intro.md#introduction) como usá-lo
-    - * é possível usar o composer sem instalação com o comando:
+    * é possível usar o composer sem instalação com o comando:
      ```bash
      $ /caminho/do/php /caminho/do/composer.phar install
      ```
@@ -27,7 +27,9 @@ Api para gestão de produtos da empresa Acme
 ### Configuração do acesso ao bando de dados:
 A configuração do banco de dados e servidor de e-mail é feita durante a instalação
 
+### Configuração do disparo de emails de relatórios:
+Editar as linhas 231 e 232 do arquivo /caminho/do/aplicacao/src/AppBundle/Controller/ProductsController.php
+
 ## Rodando a aplicação
      $ cd /caminho/da/aplicacao
      $ php bin/console server:run
-     
