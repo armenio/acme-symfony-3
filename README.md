@@ -15,11 +15,11 @@ Api para gestão de produtos da empresa Acme
     $ cd aplicacao
     $ composer install
 
-- Não conhece o composer? [Veja aqui](http://getcomposer.org/doc/00-intro.md#introduction) como usá-lo
-    * é possível usar o composer sem instalação com o comando:
-     ```bash
-     $ /caminho/do/php /caminho/do/composer.phar install
-     ```
+Não conhece o composer? [Veja aqui](http://getcomposer.org/doc/00-intro.md#introduction) como usá-lo
+
+É possível usar o composer sem instalação com o comando:
+
+    $ /caminho/do/php /caminho/do/composer.phar install
 
 ### O arquivo para criação do banco de dados encontra-se em:
 /caminho/da/aplicacao/var/db.sql
