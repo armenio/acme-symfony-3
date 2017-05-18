@@ -30,3 +30,4 @@ A configuração do banco de dados e servidor de e-mail é feita durante a insta
 ## Rodando a aplicação
      $ cd /caminho/da/aplicacao
      $ php bin/console server:run
+     
