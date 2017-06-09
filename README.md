@@ -3,7 +3,7 @@
 Api para gestão de produtos da empresa Acme
 
 #### Tecnologias utilizadas
-- Symfony 3
+- Symfony 3 
 - Doctrine ORM
 - Autenticação com token JWT usando o Bundle LexikJWTAuthenticationBundle: https://github.com/lexik/LexikJWTAuthenticationBundle
 - Composer como gerenciador de dependências php
